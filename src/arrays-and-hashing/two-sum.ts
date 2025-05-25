@@ -1,4 +1,8 @@
 /**
+ * LeetCode Problem: Two Sum
+ * Problem Link: https://leetcode.com/problems/two-sum/
+ * Level: Easy
+ * Problem Statement:
  * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
  *
  * You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -22,6 +26,9 @@
  * Output: [0,1]
  * @param nums
  * @param target
+ *
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
  */
 function twoSum(nums: number[], target: number): number[] {
   const numberMap = new Map();

@@ -1,4 +1,8 @@
 /**
+ * LeetCode Problem: Valid Parentheses
+ * Problem Link: https://leetcode.com/problems/valid-parentheses/
+ * Level: Easy
+ * Problem Statement:
  * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
  *
  * An input string is valid if:
@@ -32,6 +36,9 @@
  *
  * Output: true
  * @param s
+ *
+ * Time Complexity: O(n), where n is the length of the string s.
+ * Space Complexity: O(n), in the worst case, where all characters are opening brackets and stored in the stack.
  */
 function isValid(s: string): boolean {
   const stack: string[] = [];

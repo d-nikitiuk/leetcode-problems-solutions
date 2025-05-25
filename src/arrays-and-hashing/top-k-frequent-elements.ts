@@ -1,4 +1,8 @@
 /**
+ * LeetCode Problem: Top K Frequent Elements
+ * Problem Link: https://leetcode.com/problems/top-k-frequent-elements/
+ * Level: Medium
+ * Problem Statement:
  * Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
  *
  *
@@ -13,6 +17,9 @@
  * Output: [1]
  * @param nums
  * @param k
+ *
+ * Time Complexity: O(n log n), where n is the number of elements in nums.
+ * Space Complexity: O(n), where n is the number of unique elements in nums.
  */
 function topKFrequent(nums: number[], k: number): number[] {
   const frequencyMap: Map<number, number> = new Map();

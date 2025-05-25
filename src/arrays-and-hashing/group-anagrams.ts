@@ -1,4 +1,8 @@
 /**
+ * LeetCode Problem: Group Anagrams
+ * Problem Link: https://leetcode.com/problems/group-anagrams/
+ * Level: Medium
+ *
  * Given an array of strings strs, group the anagrams together. You can return the answer in any order.
  *
  *
@@ -25,6 +29,10 @@
  * Input: strs = ["a"]
  *
  * Output: [["a"]]
+ *
+ * Time Complexity: O(n * k log k), where n is the number of strings and k is the maximum length of a string in strs.
+ * Space Complexity: O(n * k), where n is the number of strings and k is the maximum length of a string in strs.
+ *
  * @param strs
  */
 function groupAnagrams(strs: string[]): string[][] {

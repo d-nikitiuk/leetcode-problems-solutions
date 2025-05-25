@@ -1,4 +1,8 @@
 /**
+ * LeetCode Problem: Encode and Decode Strings
+ * Problem Link: https://leetcode.com/problems/encode-and-decode-strings/
+ * Level: Medium
+ * Problem Statement:
  * Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.
  *
  * Please implement encode and decode
@@ -13,6 +17,9 @@
  * Input: ["we","say",":","yes"]
  *
  * Output: ["we","say",":","yes"]
+ *
+ * Time Complexity: O(n), where n is the total length of all strings in the input array.
+ * Space Complexity: O(n), where n is the total length of all strings in the input array.
  */
 function encode(strs: string[]): string {
   return strs.reduce((acc, str) => acc + `${str.length}#${str}`, '');

@@ -1,4 +1,8 @@
 /**
+ * LeetCode Problem: Valid Sudoku
+ * Problem Link: https://leetcode.com/problems/valid-sudoku/
+ * Level: Medium
+ * Problem Statement:
  * Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
  *
  * Each row must contain the digits 1-9 without repetition.
@@ -34,6 +38,9 @@
  * Output: false
  * Explanation: Same as Example 1, except with the 5 in the top left corner being modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.
  * @param board
+ *
+ * Time Complexity: O(1), since the board size is fixed at 9x9, the operations are constant time.
+ * Space Complexity: O(1), since we are using a fixed-size set to track seen numbers.
  */
 function isValidSudoku(board: string[][]): boolean {
   const set = new Set();

@@ -1,4 +1,8 @@
 /**
+ * LeetCode Problem: Min Stack
+ * Problem Link: https://leetcode.com/problems/min-stack/
+ * Level: Medium
+ * Problem Statement:
  * Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
  *
  * Implement the MinStack class:
@@ -30,6 +34,8 @@
  * minStack.pop();
  * minStack.top();    // return 0
  * minStack.getMin(); // return -2
+ *
+ * Time Complexity: O(1) for all operations.
  */
 class MinStack {
   private stack: { val: number; min: number }[];
