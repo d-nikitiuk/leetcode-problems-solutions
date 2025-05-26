@@ -56,10 +56,7 @@ function evalRPN(tokens: string[]): number {
     const num2 = stack.pop()!;
     const num1 = stack.pop()!;
 
-    if (token === '/') {
-      const result = num1 / num2
-      stack.push(result > 0 ? Math.floor(result) : Math.ceil(result));
-    }
+    if (token === '/') stack.push(Math.trunc(num1 / num2));
     if (token === '*') stack.push(num1 * num2);
     if (token === '+') stack.push(num1 + num2);
     if (token === '-') stack.push(num1 - num2);
