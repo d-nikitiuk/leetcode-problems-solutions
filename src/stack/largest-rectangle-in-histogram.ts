@@ -15,11 +15,40 @@
  * Example 2:
  * Input: heights = [2,4]
  * Output: 4
+ *
+ * Time Complexity: O(n), where n is the length of the input array heights.
+ * Space Complexity: O(n), for the stack used to store indices and heights.
  */
 function largestRectangleArea(heights: number[]): number {
-  // TODO: Implement the function to find the largest rectangle area in a histogram.
-  throw new Error('Function not implemented yet.');
-};
+  let maxArea = 0;
+  // Stack to store pairs of [index, height]
+  const stack: [number, number][] = [];
+
+  // Iterate through each height in the histogram
+  for (const [i, height] of heights.entries()) {
+    let start = i;
+
+    // While the stack is not empty and the current height is less than the height at the top of the stack
+    while (stack.length && stack.at(-1)![1] > height) {
+      // Pop the top element from the stack
+      const [index, height] = stack.pop()!;
+
+      // Calculate the area with the popped height as the smallest height
+      maxArea = Math.max(maxArea, height * (i - index));
+      // The start index for the current height is the index of the popped element
+      start = index;
+    }
+
+    stack.push([start, height]);
+  }
+
+  for (const [index, height] of stack) {
+    // Calculate the area for the remaining heights in the stack
+    maxArea = Math.max(maxArea, height * (heights.length - index));
+  }
+
+  return maxArea;
+}
 
 // Example usage:
 const heights1 = [2, 1, 5, 6, 2, 3];
