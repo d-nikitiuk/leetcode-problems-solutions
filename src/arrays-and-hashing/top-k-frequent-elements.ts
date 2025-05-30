@@ -18,11 +18,12 @@
  * @param nums
  * @param k
  *
- * Time Complexity: O(n log n), where n is the number of elements in nums.
+ * Time Complexity: O(n), where n is the number of elements in nums.
  * Space Complexity: O(n), where n is the number of unique elements in nums.
  */
 function topKFrequent(nums: number[], k: number): number[] {
   const frequencyMap: Map<number, number> = new Map();
+  const arrayWithFrequencyAsIndex: number[][] = [];
 
   for (const number of nums) {
     if (!frequencyMap.get(number)) {
@@ -34,10 +35,19 @@ function topKFrequent(nums: number[], k: number): number[] {
     frequencyMap.set(number, frequencyMap.get(number)! + 1);
   }
 
-  return Array.from(frequencyMap)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, k)
-    .map((item) => item[0]);
+  for (const [number, frequency] of frequencyMap.entries()) {
+    if (!arrayWithFrequencyAsIndex[frequency]) {
+      arrayWithFrequencyAsIndex[frequency] = [number];
+
+      continue;
+    }
+
+    arrayWithFrequencyAsIndex[frequency] = [...arrayWithFrequencyAsIndex[frequency], number];
+  }
+
+  const flat = arrayWithFrequencyAsIndex.flat();
+
+  return flat.slice(flat.length - k);
 }
 
 // Example usage:
@@ -47,6 +57,9 @@ const nums2 = [1];
 const k2 = 1;
 const nums3 = [-1, -1];
 const k3 = 1;
+const nums4 = [1,2];
+const k4 = 2;
 console.log(topKFrequent(nums1, k1)); // Output: [1, 2]
 console.log(topKFrequent(nums2, k2)); // Output: [1]
 console.log(topKFrequent(nums3, k3)); // Output: [-1]
+console.log(topKFrequent(nums4, k4)); // Output: [1,2]
