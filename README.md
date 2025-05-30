@@ -29,7 +29,8 @@ Example format:
  * Problem Link: https://leetcode.com/problems/top-k-frequent-elements/
  * Level: Medium
  * Problem Statement:
- * Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
+ * Given an integer array nums and an integer k, return the k most frequent elements. 
+ * You may return the answer in any order.
  *
  *
  *
@@ -83,8 +84,8 @@ function topKFrequent(nums: number[], k: number): number[] {
 |------------|-------|
 | Easy       | 5     |
 | Medium     | 13    |
-| Hard       | 1     |
-| **Total**  | 19    |
+| Hard       | 2     |
+| **Total**  | 20    |
 
 
 ## 🚀 Getting Started
@@ -113,10 +114,6 @@ npm run lint
 
 ## Author
 [Dmytro Nikitiuk](https://github.com/tomorroN)
-
-## License
-ISC
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🌟 Support
 
