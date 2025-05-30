@@ -82,10 +82,10 @@ function topKFrequent(nums: number[], k: number): number[] {
 
 | Difficulty | Count |
 |------------|-------|
-| Easy       | 5     |
-| Medium     | 13    |
+| Easy       | 6     |
+| Medium     | 14    |
 | Hard       | 2     |
-| **Total**  | 20    |
+| **Total**  | 21    |
 
 
 ## 🚀 Getting Started
