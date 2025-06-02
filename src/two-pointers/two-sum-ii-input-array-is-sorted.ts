@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Two Sum II - Input Array Is Sorted
  * Problem Link: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
@@ -45,13 +47,13 @@ function twoSum(numbers: number[], target: number): number[] {
   return [];
 }
 
-// Example usage:
+// Tests:
 const numbers1 = [2, 7, 11, 15];
 const target1 = 9;
 const numbers2 = [2, 3, 4];
 const target2 = 6;
 const numbers3 = [-1, 0];
 const target3 = -1;
-console.log(twoSum(numbers1, target1)); // Output: [1, 2]
-console.log(twoSum(numbers2, target2)); // Output: [1, 3]
-console.log(twoSum(numbers3, target3)); // Output: [1, 2]
+expect(twoSum(numbers1, target1), [1, 2]);
+expect(twoSum(numbers2, target2), [1, 3]);
+expect(twoSum(numbers3, target3), [1, 2]);

@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Car Fleet
  * Problem Link: https://leetcode.com/problems/car-fleet/
@@ -59,12 +61,10 @@
  */
 function carFleet(target: number, position: number[], speed: number[]): number {
   // Sort the cars by their starting position in ascending order
-  const sortedCarsByPositionAsc = position
-    .map((pos, index) => ({ pos, speed: speed[index] }))
-    .sort((a, b) => a.pos - b.pos);
+  const sortedCarsByPositionAsc = position.map((pos, index) => ({ pos, speed: speed[index] })).sort((a, b) => a.pos - b.pos);
 
   // Calculate the time it takes for each car to reach the target
-  const timeForEachCarPosition: number[] = sortedCarsByPositionAsc.map(car => (target - car.pos) / car.speed);
+  const timeForEachCarPosition: number[] = sortedCarsByPositionAsc.map((car) => (target - car.pos) / car.speed);
 
   let maxTime: number = 0;
   let result: number = 0;
@@ -74,14 +74,14 @@ function carFleet(target: number, position: number[], speed: number[]): number {
     // If the current car's time is greater than the maximum time seen so far,
     if (timeForEachCarPosition[i] > maxTime) {
       maxTime = timeForEachCarPosition[i];
-      result+=1;
+      result += 1;
     }
   }
 
   return result;
 }
 
-// Example usage:
+// Tests:
 const target1 = 12;
 const position1 = [10, 8, 0, 5, 3];
 const speed1 = [2, 4, 1, 1, 3];
@@ -91,6 +91,6 @@ const speed2 = [3];
 const target3 = 100;
 const position3 = [0, 2, 4];
 const speed3 = [4, 2, 1];
-console.log(carFleet(target1, position1, speed1)); // Output: 3
-console.log(carFleet(target2, position2, speed2)); // Output: 1
-console.log(carFleet(target3, position3, speed3)); // Output: 1
+expect(carFleet(target1, position1, speed1), 3);
+expect(carFleet(target2, position2, speed2), 1);
+expect(carFleet(target3, position3, speed3), 1);

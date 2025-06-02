@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Valid Anagram
  * Problem Link: https://leetcode.com/problems/valid-anagram/
@@ -41,6 +43,6 @@ function isAnagram(s: string, t: string): boolean {
 }
 
 // Example usage
-console.log(isAnagram('anagram', 'nagaram')) // true;
-console.log(isAnagram('rat', 'cat')) // false
-console.log(isAnagram('aacc', 'ccac')) // false
+expect(isAnagram('anagram', 'nagaram'), true);
+expect(isAnagram('rat', 'cat'), false);
+expect(isAnagram('aacc', 'ccac'), false);

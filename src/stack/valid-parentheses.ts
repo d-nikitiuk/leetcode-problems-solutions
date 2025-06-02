@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Valid Parentheses
  * Problem Link: https://leetcode.com/problems/valid-parentheses/
@@ -67,16 +69,16 @@ function isValid(s: string): boolean {
   return !stack.length;
 }
 
-// Example usage:
+// Tests:
 const s1 = '()';
 const s2 = '()[]{}';
 const s3 = '(]';
 const s4 = '([])';
 const s5 = '[';
 const s6 = ']';
-console.log(isValid(s1)); // Output: true
-console.log(isValid(s2)); // Output: true
-console.log(isValid(s3)); // Output: false
-console.log(isValid(s4)); // Output: true
-console.log(isValid(s5)); // Output: false
-console.log(isValid(s6)); // Output: false
+expect(isValid(s1), true);
+expect(isValid(s2), true);
+expect(isValid(s3), false);
+expect(isValid(s4), true);
+expect(isValid(s5), false);
+expect(isValid(s6), false);

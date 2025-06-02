@@ -1,3 +1,5 @@
+import { expect } from '../expect.js';
+
 /**
  * LeetCode Problem: Koko Eating Bananas
  * Problem Link: https://leetcode.com/problems/koko-eating-bananas/
@@ -55,13 +57,13 @@ function minEatingSpeed(piles: number[], h: number): number {
   return result;
 }
 
-// Example usage:
+// Tests:
 const piles1 = [3, 6, 7, 11];
 const h1 = 8;
 const piles2 = [30, 11, 23, 4, 20];
 const h2 = 5;
 const piles3 = [30, 11, 23, 4, 20];
 const h3 = 6;
-console.log(minEatingSpeed(piles1, h1)); // Output: 4
-console.log(minEatingSpeed(piles2, h2)); // Output: 30
-console.log(minEatingSpeed(piles3, h3)); // Output: 23
+expect(minEatingSpeed(piles1, h1), 4);
+expect(minEatingSpeed(piles2, h2), 30);
+expect(minEatingSpeed(piles3, h3), 23);

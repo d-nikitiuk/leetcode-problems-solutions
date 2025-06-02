@@ -34,6 +34,7 @@
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  */
+import { expect } from '../expect';
 
 function containsDuplicate(nums: number[]): boolean {
   const numSet = new Set<number>();
@@ -48,10 +49,10 @@ function containsDuplicate(nums: number[]): boolean {
   return false;
 }
 
-// Example usage:
+// Tests:
 const nums1 = [1, 2, 3, 1];
 const nums2 = [1, 2, 3, 4];
 const nums3 = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
-console.log(containsDuplicate(nums1)); // Output: true
-console.log(containsDuplicate(nums2)); // Output: false
-console.log(containsDuplicate(nums3)); // Output: true
+expect(containsDuplicate(nums1), true);
+expect(containsDuplicate(nums2), false);
+expect(containsDuplicate(nums3), true);

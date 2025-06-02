@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Product of Array Except Self
  * Problem Link: https://leetcode.com/problems/product-of-array-except-self/
@@ -37,9 +39,9 @@ function productExceptSelf(nums: number[]): number[] {
   return result;
 }
 
-// Example usage:
+// Tests:
 const nums1 = [1, 2, 3, 4];
 // res = [1, 1, 2, 6]
 const nums2 = [-1, 1, 0, -3, 3];
-console.log(productExceptSelf(nums1)); // Output: [24, 12, 8, 6]
-console.log(productExceptSelf(nums2)); // Output: [0, 0, 9, 0, 0]
+expect(productExceptSelf(nums1), [24, 12, 8, 6]);
+expect(productExceptSelf(nums2), [0, 0, 9, 0, 0]);

@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Min Stack
  * Problem Link: https://leetcode.com/problems/min-stack/
@@ -61,12 +63,12 @@ class MinStack {
   }
 }
 
-// Example usage:
+// Tests:
 const minStack = new MinStack();
 minStack.push(-2);
 minStack.push(0);
 minStack.push(-3);
-console.log(minStack.getMin()); // Output: -3
+expect(minStack.getMin(), -3);
 minStack.pop();
-console.log(minStack.top()); // Output: 0
-console.log(minStack.getMin()); // Output: -2
+expect(minStack.top(), 0);
+expect(minStack.getMin(), -2);

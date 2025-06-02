@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Valid Palindrome
  * Problem Link: https://leetcode.com/problems/valid-palindrome/
@@ -42,7 +44,7 @@ function isPalindrome(s: string): boolean {
 }
 
 // Example usage
-console.log(isPalindrome('A man, a plan, a canal: Panama')); // Output: true
-console.log(isPalindrome('race a car')); // Output: false
-console.log(isPalindrome(' ')); // Output: true
-console.log(isPalindrome('ab_a')); // Output: true
+expect(isPalindrome('A man, a plan, a canal: Panama'), true);
+expect(isPalindrome('race a car'), false);
+expect(isPalindrome(' '), true);
+expect(isPalindrome('ab_a'), true);

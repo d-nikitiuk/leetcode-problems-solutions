@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Generate Parentheses
  * Problem Link: https://leetcode.com/problems/generate-parentheses/
@@ -20,25 +22,23 @@
  * Space Complexity: O(4^n / sqrt(n)), for storing the combinations.
  */
 function generateParenthesis(n: number): string[] {
-  const allCombos: string[] = []
+  const allCombos: string[] = [];
 
-  function recurse(
-    openParens: number, closedParens: number, combo: string
-  ) {
+  function recurse(openParens: number, closedParens: number, combo: string) {
     if (openParens === 0 && closedParens === 0) {
-      allCombos.push(combo)
-      return
+      allCombos.push(combo);
+      return;
     }
 
-    if (openParens < closedParens) recurse(openParens, closedParens - 1, combo + ')')
-    if (openParens > 0) recurse(openParens - 1, closedParens, combo + '(')
+    if (openParens < closedParens) recurse(openParens, closedParens - 1, combo + ')');
+    if (openParens > 0) recurse(openParens - 1, closedParens, combo + '(');
   }
 
-  recurse(n, n, '')
+  recurse(n, n, '');
 
-  return allCombos
+  return allCombos;
 }
 
-// Example usage:
-console.log(generateParenthesis(3)); // Output: ["((()))","(()())","(())()","()(())","()()()"]
-console.log(generateParenthesis(1)); // Output: ["()"]
+// Tests:
+expect(generateParenthesis(3).sort(), ['((()))', '(()())', '(())()', '()(())', '()()()'].sort()); // Order does not matter
+expect(generateParenthesis(1), ['()']);

@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Group Anagrams
  * Problem Link: https://leetcode.com/problems/group-anagrams/
@@ -54,10 +56,10 @@ function groupAnagrams(strs: string[]): string[][] {
   return Array.from(map.values());
 }
 
-// Example usage:
-const strs1 = ["eat", "tea", "tan", "ate", "nat", "bat"];
-const strs2 = [""];
-const strs3 = ["a"];
-console.log(groupAnagrams(strs1)); // Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
-console.log(groupAnagrams(strs2)); // Output: [[""]]
-console.log(groupAnagrams(strs3)); // Output: [["a"]]
+// Tests:
+const strs1 = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
+const strs2 = [''];
+const strs3 = ['a'];
+expect(groupAnagrams(strs1), [['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']]);
+expect(groupAnagrams(strs2), [['']]);
+expect(groupAnagrams(strs3), [['a']]);

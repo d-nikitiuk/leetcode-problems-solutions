@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Container With Most Water
  * Problem Link: https://leetcode.com/problems/container-with-most-water/
@@ -37,17 +39,17 @@ function maxArea(height: number[]): number {
     if (area > maxArea) maxArea = area;
 
     if (height[left] > height[right]) {
-      right-=1;
+      right -= 1;
     } else {
-      left+=1;
+      left += 1;
     }
   }
 
   return maxArea;
 }
 
-// Example usage:
+// Tests:
 const height1 = [1, 8, 6, 2, 5, 4, 8, 3, 7];
 const height2 = [1, 1];
-console.log(maxArea(height1)); // Output: 49
-console.log(maxArea(height2)); // Output: 1
+expect(maxArea(height1), 49);
+expect(maxArea(height2), 1);

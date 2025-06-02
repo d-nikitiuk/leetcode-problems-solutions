@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Valid Sudoku
  * Problem Link: https://leetcode.com/problems/valid-sudoku/
@@ -60,7 +62,7 @@ function isValidSudoku(board: string[][]): boolean {
   return true;
 }
 
-// Example usage:
+// Tests:
 const board1 = [
   // check uniqueness
   ['5', '3', '.', '.', '7', '.', '.', '.', '.'], // 0-2 => Map(0 Set), 3-5 => Map(1 Set)
@@ -96,6 +98,6 @@ const board3 = [
   ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
   ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
 ];
-console.log(isValidSudoku(board1)); // Output: true
-console.log(isValidSudoku(board2)); // Output: false
-console.log(isValidSudoku(board3)); // Output: false
+expect(isValidSudoku(board1), true);
+expect(isValidSudoku(board2), false);
+expect(isValidSudoku(board3), false);

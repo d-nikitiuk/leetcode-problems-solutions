@@ -24,12 +24,14 @@ Each solution typically includes:
 
 Example format:
 ```typescript
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Top K Frequent Elements
  * Problem Link: https://leetcode.com/problems/top-k-frequent-elements/
  * Level: Medium
  * Problem Statement:
- * Given an integer array nums and an integer k, return the k most frequent elements. 
+ * Given an integer array nums and an integer k, return the k most frequent elements.
  * You may return the answer in any order.
  *
  *
@@ -76,6 +78,21 @@ function topKFrequent(nums: number[], k: number): number[] {
 
   return flat.slice(flat.length - k);
 }
+
+// Tests:
+const nums1 = [1, 1, 1, 2, 2, 3];
+const k1 = 2;
+const nums2 = [1];
+const k2 = 1;
+const nums3 = [-1, -1];
+const k3 = 1;
+const nums4 = [1, 2];
+const k4 = 2;
+expect(topKFrequent(nums1, k1).sort(), [1, 2].sort()); // Sorting to ensure order doesn't affect the test
+expect(topKFrequent(nums2, k2), [1]);
+expect(topKFrequent(nums3, k3), [-1]);
+expect(topKFrequent(nums4, k4).sort(), [1, 2].sort()); // Sorting to ensure order doesn't affect the test
+
 ```
 
 ## ✅ Problems Solved

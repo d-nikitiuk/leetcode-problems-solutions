@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Encode and Decode Strings
  * Problem Link: https://leetcode.com/problems/encode-and-decode-strings/
@@ -38,14 +40,14 @@ function decode(str: string): string[] {
 
   return result;
 }
-// Example usage:
+// Tests:
 const strs1 = ['neet', 'code', 'love', 'you'];
 const strs2 = ['we', 'say', ':', 'yes'];
 const encoded1 = encode(strs1);
 const decoded1 = decode(encoded1);
 const encoded2 = encode(strs2);
 const decoded2 = decode(encoded2);
-console.log(encoded1); // Output: Encoded string
-console.log(decoded1); // Output: ["neet", "code", "love", "you"]
-console.log(encoded2); // Output: Encoded string
-console.log(decoded2); // Output: ["we", "say", ":", "yes"]
+expect(encoded1, '4#neet4#code4#love3#you');
+expect(decoded1, ['neet', 'code', 'love', 'you']);
+expect(encoded2, '2#we3#say1#:3#yes');
+expect(decoded2, ['we', 'say', ':', 'yes']);

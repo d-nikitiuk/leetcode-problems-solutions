@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Search a 2D Matrix
  * Problem Link: https://leetcode.com/problems/search-a-2d-matrix/
@@ -43,7 +45,7 @@ function searchMatrix(matrix: number[][], target: number): boolean {
   return false;
 }
 
-// Example usage:
+// Tests:
 const matrix1 = [
   [1, 3, 5, 7],
   [10, 11, 16, 20],
@@ -56,5 +58,5 @@ const matrix2 = [
   [23, 30, 34, 60],
 ];
 const target2 = 13;
-console.log(searchMatrix(matrix1, target1)); // Output: true
-console.log(searchMatrix(matrix2, target2)); // Output: false
+expect(searchMatrix(matrix1, target1), true);
+expect(searchMatrix(matrix2, target2), false);

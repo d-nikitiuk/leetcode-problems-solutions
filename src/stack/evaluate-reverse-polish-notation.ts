@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Evaluate Reverse Polish Notation
  * Problem Link: https://leetcode.com/problems/evaluate-reverse-polish-notation/
@@ -65,10 +67,10 @@ function evalRPN(tokens: string[]): number {
   return stack[0];
 }
 
-// Example usage:
+// Tests:
 const tokens1 = ['2', '1', '+', '3', '*'];
 const tokens2 = ['4', '13', '5', '/', '+'];
 const tokens3 = ['10', '6', '9', '3', '+', '-11', '*', '/', '*', '17', '+', '5', '+'];
-console.log(evalRPN(tokens1)); // Output: 9
-console.log(evalRPN(tokens2)); // Output: 6
-console.log(evalRPN(tokens3)); // Output: 22
+expect(evalRPN(tokens1), 9);
+expect(evalRPN(tokens2), 6);
+expect(evalRPN(tokens3), 22);

@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Daily Temperatures
  * Problem Link: https://leetcode.com/problems/daily-temperatures/
@@ -48,10 +50,10 @@ function dailyTemperatures(temperatures: number[]): number[] {
   return result;
 }
 
-// Example usage:
+// Tests:
 const temperatures1 = [73, 74, 75, 71, 69, 72, 76, 73];
 const temperatures2 = [30, 40, 50, 60];
 const temperatures3 = [30, 60, 90];
-console.log(dailyTemperatures(temperatures1)); // Output: [1, 1, 4, 2, 1, 1, 0, 0]
-console.log(dailyTemperatures(temperatures2)); // Output: [1, 1, 1, 0]
-console.log(dailyTemperatures(temperatures3)); // Output: [1, 1, 0]
+expect(dailyTemperatures(temperatures1), [1, 1, 4, 2, 1, 1, 0, 0]);
+expect(dailyTemperatures(temperatures2), [1, 1, 1, 0]);
+expect(dailyTemperatures(temperatures3), [1, 1, 0]);

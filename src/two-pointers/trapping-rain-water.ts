@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Trapping Rain Water
  * Problem Link: https://leetcode.com/problems/trapping-rain-water/
@@ -41,8 +43,8 @@ function trap(height: number[]): number {
   return area;
 }
 
-// Example usage:
+// Tests:
 const height1 = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1];
 const height2 = [4, 2, 0, 3, 2, 5];
-console.log(trap(height1)); // Output: 6
-console.log(trap(height2)); // Output: 9
+expect(trap(height1), 6);
+expect(trap(height2), 9);

@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Top K Frequent Elements
  * Problem Link: https://leetcode.com/problems/top-k-frequent-elements/
@@ -51,16 +53,16 @@ function topKFrequent(nums: number[], k: number): number[] {
   return flat.slice(flat.length - k);
 }
 
-// Example usage:
+// Tests:
 const nums1 = [1, 1, 1, 2, 2, 3];
 const k1 = 2;
 const nums2 = [1];
 const k2 = 1;
 const nums3 = [-1, -1];
 const k3 = 1;
-const nums4 = [1,2];
+const nums4 = [1, 2];
 const k4 = 2;
-console.log(topKFrequent(nums1, k1)); // Output: [1, 2]
-console.log(topKFrequent(nums2, k2)); // Output: [1]
-console.log(topKFrequent(nums3, k3)); // Output: [-1]
-console.log(topKFrequent(nums4, k4)); // Output: [1,2]
+expect(topKFrequent(nums1, k1).sort(), [1, 2].sort()); // Sorting to ensure order doesn't affect the test
+expect(topKFrequent(nums2, k2), [1]);
+expect(topKFrequent(nums3, k3), [-1]);
+expect(topKFrequent(nums4, k4).sort(), [1, 2].sort()); // Sorting to ensure order doesn't affect the test

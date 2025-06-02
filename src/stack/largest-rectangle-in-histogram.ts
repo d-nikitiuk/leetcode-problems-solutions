@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Largest Rectangle in Histogram
  * Problem Link: https://leetcode.com/problems/largest-rectangle-in-histogram/
@@ -50,8 +52,8 @@ function largestRectangleArea(heights: number[]): number {
   return maxArea;
 }
 
-// Example usage:
+// Tests:
 const heights1 = [2, 1, 5, 6, 2, 3];
 const heights2 = [2, 4];
-console.log(largestRectangleArea(heights1)); // Output: 10
-console.log(largestRectangleArea(heights2)); // Output: 4
+expect(largestRectangleArea(heights1), 10);
+expect(largestRectangleArea(heights2), 4);

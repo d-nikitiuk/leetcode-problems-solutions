@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: 3Sum
  * Problem Link: https://leetcode.com/problems/3sum/
@@ -35,7 +37,7 @@
  * * Space Complexity: O(1) for the result map, as we are not using any additional data structures that grow with input size.
  */
 function threeSum(nums: number[]): number[][] {
-  const sortedNums: number[] = nums.sort((a,b) => a - b);
+  const sortedNums: number[] = nums.sort((a, b) => a - b);
   const map: Map<string, number[]> = new Map();
 
   for (const [index, num] of sortedNums.entries()) {
@@ -61,10 +63,13 @@ function threeSum(nums: number[]): number[][] {
   return [...map.values()];
 }
 
-// Example usage:
+// Tests:
 const nums1 = [-1, 0, 1, 2, -1, -4];
 const nums2 = [0, 1, 1];
 const nums3 = [0, 0, 0];
-console.log(threeSum(nums1)); // Output: [[-1,-1,2],[-1,0,1]]
-console.log(threeSum(nums2)); // Output: []
-console.log(threeSum(nums3)); // Output: [[0,0,0]]
+expect(threeSum(nums1), [
+  [-1, -1, 2],
+  [-1, 0, 1],
+]);
+expect(threeSum(nums2), []);
+expect(threeSum(nums3), [[0, 0, 0]]);

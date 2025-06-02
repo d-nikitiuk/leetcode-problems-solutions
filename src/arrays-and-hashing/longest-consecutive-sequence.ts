@@ -1,3 +1,5 @@
+import { expect } from '../expect';
+
 /**
  * LeetCode Problem: Contains Duplicate
  * Problem Link: https://leetcode.com/problems/longest-consecutive-sequence/
@@ -45,10 +47,10 @@ function longestConsecutive(nums: number[]): number {
   return longest;
 }
 
-// Example usage:
+// Tests:
 const nums1 = [100, 4, 200, 1, 3, 2];
 const nums2 = [0, 3, 7, 2, 5, 8, 4, 6, 0, 1];
 const nums3 = [1, 0, 1, 2];
-console.log(longestConsecutive(nums1)); // Output: 4
-console.log(longestConsecutive(nums2)); // Output: 9
-console.log(longestConsecutive(nums3)); // Output: 3
+expect(longestConsecutive(nums1), 4);
+expect(longestConsecutive(nums2), 9);
+expect(longestConsecutive(nums3), 3);
