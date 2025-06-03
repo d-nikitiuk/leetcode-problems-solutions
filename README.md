@@ -100,9 +100,9 @@ expect(topKFrequent(nums4, k4).sort(), [1, 2].sort()); // Sorting to ensure orde
 | Difficulty | Count |
 |------------|-------|
 | Easy       | 6     |
-| Medium     | 17    |
+| Medium     | 18    |
 | Hard       | 2     |
-| **Total**  | 25    |
+| **Total**  | 26    |
 
 
 ## 🚀 Getting Started
