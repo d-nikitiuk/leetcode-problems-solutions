@@ -3,7 +3,7 @@ import { expect } from '../utils';
 /**
  * LeetCode Problem: Search a 2D Matrix
  * Problem Link: https://leetcode.com/problems/search-a-2d-matrix/
- * Level: Easy
+ * Level: Medium
  * Problem Statement:
  * You are given an m x n integer matrix `matrix` with the following two properties:
  *
