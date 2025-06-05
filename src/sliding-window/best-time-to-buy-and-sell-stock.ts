@@ -1,4 +1,4 @@
-import { expect } from '../expect';
+import { expect } from '../utils';
 
 /**
  * LeetCode Problem: Best Time to Buy and Sell Stock

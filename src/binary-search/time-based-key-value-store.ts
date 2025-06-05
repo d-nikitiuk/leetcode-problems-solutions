@@ -1,7 +1,10 @@
-import { expect } from '../expect';
+import { expect } from '../utils';
 
 /**
  * LeetCode Problem: Time Based Key-Value Store
+ * Problem Link: https://leetcode.com/problems/time-based-key-value-store/
+ * Level: Medium
+ * Problem Statement:
  * Design a time-based key-value data structure that can store multiple values for the same key at different time stamps
  * and retrieve the key's value at a certain timestamp.
  *
@@ -31,8 +34,8 @@ import { expect } from '../expect';
  * timeMap.get("foo", 4);         // return "bar2"
  * timeMap.get("foo", 5);         // return "bar2"
  *
- * * Time Complexity: O(log n) for get operation, O(1) for set operation, where n is the number of values stored for a key.
- * * Space Complexity: O(n) for storing the values, where n is the number of values stored for a key.
+ * Time Complexity: O(log n) for get operation, O(1) for set operation, where n is the number of values stored for a key.
+ * Space Complexity: O(n) for storing the values, where n is the number of values stored for a key.
  */
 class TimeMap {
   map: Map<string, [number, string][]>;

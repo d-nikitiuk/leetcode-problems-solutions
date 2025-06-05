@@ -1,4 +1,4 @@
-import { expect } from '../expect';
+import { expect } from '../utils';
 
 /**
  * LeetCode Problem: Product of Array Except Self

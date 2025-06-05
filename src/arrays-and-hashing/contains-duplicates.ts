@@ -34,7 +34,7 @@
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  */
-import { expect } from '../expect';
+import { expect } from '../utils';
 
 function containsDuplicate(nums: number[]): boolean {
   const numSet = new Set<number>();

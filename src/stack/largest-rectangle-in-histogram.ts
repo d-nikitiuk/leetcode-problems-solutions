@@ -1,4 +1,4 @@
-import { expect } from '../expect';
+import { expect } from '../utils';
 
 /**
  * LeetCode Problem: Largest Rectangle in Histogram

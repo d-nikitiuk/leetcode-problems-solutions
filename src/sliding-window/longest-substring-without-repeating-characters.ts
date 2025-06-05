@@ -1,9 +1,9 @@
-import { expect } from '../expect';
+import { expect } from '../utils';
 
 /**
  * LeetCode Problem: Longest Substring Without Repeating Characters
  * Problem Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
- * * Level: Medium
+ * Level: Medium
  * Problem Statement:
  * Given a string s, find the length of the longest substring without duplicate characters.
  *
