@@ -24,7 +24,7 @@ Each solution typically includes:
 
 Example format:
 ```typescript
-import { expect } from '../expect';
+import { expect } from '../utils';
 
 /**
  * LeetCode Problem: Top K Frequent Elements
@@ -99,10 +99,10 @@ expect(topKFrequent(nums4, k4).sort(), [1, 2].sort()); // Sorting to ensure orde
 
 | Difficulty | Count |
 |------------|-------|
-| Easy       | 9     |
+| Easy       | 10     |
 | Medium     | 22    |
 | Hard       | 5     |
-| **Total**  | 36    |
+| **Total**  | 37    |
 
 
 ## 🚀 Getting Started
