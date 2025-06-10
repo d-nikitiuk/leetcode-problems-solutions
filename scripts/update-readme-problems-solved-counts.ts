@@ -42,7 +42,7 @@ const countDifficulties = (files: string[]): Counts => {
 const updateReadme = (counts: Counts) => {
   const readmeWithReplacement = fs.readFileSync(README_PATH, 'utf8').replace(
     /\| Easy\s+\|\s+\d+\s+\|\n\| Medium\s+\|\s+\d+\s+\|\n\| Hard\s+\|\s+\d+\s+\|\n\| \*\*Total\*\* \s+\|\s+\d+\s+\|/m,
-    `| Easy       | ${counts.easy}     |
+    `| Easy       | ${counts.easy}    |
 | Medium     | ${counts.medium}    |
 | Hard       | ${counts.hard}     |
 | **Total**  | ${counts.easy + counts.medium + counts.hard}    |`,
