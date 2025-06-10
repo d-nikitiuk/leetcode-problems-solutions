@@ -42,6 +42,8 @@ import { expect } from '../utils';
  * It does not matter what you leave beyond the returned k (hence they are underscores).
  * @param nums
  *
+ * Time Complexity: O(n), where n is the length of the input array nums.
+ * Space Complexity: O(1), as we are modifying the input array in-place without using any additional data structures.
  */
 function removeDuplicates(nums: number[]): number {
   let k = 1;
