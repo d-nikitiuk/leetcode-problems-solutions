@@ -100,8 +100,7 @@ class MyCircularDeque:
             self.frontNode = self.frontNode.next
             self.frontNode.prev = None
         else:
-            self.frontNode = None
-            self.rearNode = None
+            self.frontNode = self.rearNode = None
 
         self.size -= 1
 
@@ -115,24 +114,17 @@ class MyCircularDeque:
             self.rearNode = self.rearNode.prev
             self.rearNode.next = None
         else:
-            self.rearNode = None
-            self.frontNode = None
+            self.rearNode = self.frontNode = None
 
         self.size -= 1
 
         return True
 
     def getFront(self) -> int:
-        if self.isEmpty():
-            return -1
-
-        return self.frontNode.value
+        return -1 if self.isEmpty() else self.frontNode.value
 
     def getRear(self) -> int:
-        if self.isEmpty():
-            return -1
-
-        return self.rearNode.value
+        return -1 if self.isEmpty() else self.rearNode.value
 
     def isEmpty(self) -> bool:
         return self.size == 0

@@ -45,23 +45,23 @@ class Item:
         self.x = x
         self.index = index
 
-    def __repr__(self):
-        return f"Item(x={self.x}, index={self.index})"
-
 class MyQueue:
-    stack_in: list[Item] = []
-    stack_out: list[Item] = []
-
     def __init__(self):
+        """Initialize two stacks to simulate a queue."""
         self.stack_in: list[Item] = []
         self.stack_out: list[Item] = []
 
     def push(self, x: int) -> None:
+        """Push element x to the back of the queue."""
         index = self.stack_in[-1].index + 1 if self.stack_in else 0
         self.stack_in.append(Item(x, index))
 
     def pop(self) -> int:
-        peek = self.peekFull()
+        """
+        Remove the element from the front of the queue and return it.
+        Maintains stack_out as a history of popped elements.
+        """
+        peek = self.__get_front_item()
 
         if self.stack_out:
             self.stack_out.pop()
@@ -71,15 +71,18 @@ class MyQueue:
         return peek.x
 
     def peek(self) -> int:
-        return self.peekFull().x
+        """Get the front element."""
+        return self.__get_front_item().x
 
-    def peekFull(self) -> Item:
+    def __get_front_item(self) -> Item:
+        """Helper to get the front Item object."""
         if self.stack_out:
             return self.stack_in[self.stack_out[-1].index + 1]
 
         return self.stack_in[0]
 
     def empty(self) -> bool:
+        """Return True if the queue is empty, False otherwise."""
         if self.stack_out and self.stack_in:
             return self.stack_out[-1].index == self.stack_in[-1].index
 
