@@ -100,9 +100,9 @@ expect(topKFrequent(nums4, k4).sort(), [1, 2].sort()); // Sorting to ensure orde
 | Difficulty | Count |
 |------------|-------|
 | Easy       | 11    |
-| Medium     | 23    |
+| Medium     | 24    |
 | Hard       | 5     |
-| **Total**  | 39    |
+| **Total**  | 40    |
 
 
 ## 🚀 Getting Started
@@ -111,6 +111,10 @@ expect(topKFrequent(nums4, k4).sort(), [1, 2].sort()); // Sorting to ensure orde
 
 - Node.js
 - npm
+
+or 
+
+- Python 3.x (for Python solutions)
 
 ### Install dependencies
 
@@ -121,6 +125,10 @@ npm install
 ### Run solutions
 ```bash
 npm start src/arrays-and-hashing/contains-duplicates.ts
+```
+or
+```bash
+PYTHONPATH=./ python3 src/stack-and-queue/design-circular-deque.py # For Python solutions
 ```
 
 ### Lint the code

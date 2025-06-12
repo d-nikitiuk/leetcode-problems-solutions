@@ -16,7 +16,7 @@ const walk = (dir: string, filesList: string[] = []): string[] => {
 
     if (fs.statSync(filepath).isDirectory()) {
       walk(filepath, filesList);
-    } else if (file.endsWith('.ts')) {
+    } else if (file.endsWith('.py') || file.endsWith('.ts')) {
       filesList.push(filepath);
     }
   }
