@@ -17,6 +17,6 @@ def deep_equal(a: Any, b: Any) -> bool:
 
 def expect(actual: Any, expected: Any) -> None:
     if not deep_equal(actual, expected):
-        print(f"{RED}❌ Expected {json.dumps(expected)}, but got {json.dumps(actual)}{RESET}")
+        print(f"{RED}❌ Expected {json.dumps(expected, default=vars)}, but got {json.dumps(actual, default=vars)}{RESET}")
     else:
-        print(f"{GREEN}✅ Test passed with expected value: {json.dumps(expected)}{RESET}")
+        print(f"{GREEN}✅ Test passed with expected value: {json.dumps(expected, default=vars)}{RESET}")

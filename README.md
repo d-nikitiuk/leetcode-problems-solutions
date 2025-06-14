@@ -143,10 +143,10 @@ if __name__ == "__main__":
 
 | Difficulty | Count |
 |------------|-------|
-| Easy       | 13    |
+| Easy       | 14    |
 | Medium     | 24    |
 | Hard       | 5     |
-| **Total**  | 42    |
+| **Total**  | 43    |
 
 
 ## 🚀 Getting Started
