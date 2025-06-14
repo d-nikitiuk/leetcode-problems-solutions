@@ -32,11 +32,9 @@ class ListNode:
 
 class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if head is None: return head
-
         dummy = head
 
-        while head.next:
+        while head and head.next:
             if head.next and head.next.val == head.val:
                 head.next = head.next.next
             else:
