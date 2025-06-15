@@ -165,6 +165,11 @@ or
 ```bash
 npm install
 ```
+or
+
+```bash
+pip install -r requirements.txt  # For Python solutions
+```
 
 ### Run solutions
 ```bash
