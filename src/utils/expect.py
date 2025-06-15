@@ -7,6 +7,7 @@ RESET = "\033[0m"
 
 
 def deep_equal(a: Any, b: Any) -> bool:
+    """Recursively checks if two objects are deeply equal."""
     if isinstance(a, dict) and isinstance(b, dict):
         return all(deep_equal(a[k], b[k]) for k in a) and all(k in a for k in b)
     elif isinstance(a, list) and isinstance(b, list):
@@ -16,6 +17,7 @@ def deep_equal(a: Any, b: Any) -> bool:
 
 
 def expect(actual: Any, expected: Any) -> None:
+    """Compares actual and expected values, printing a message based on the comparison."""
     if not deep_equal(actual, expected):
         print(f"{RED}❌ Expected {json.dumps(expected, default=vars)}, but got {json.dumps(actual, default=vars)}{RESET}")
     else:
