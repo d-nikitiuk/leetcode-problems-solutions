@@ -29,6 +29,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the length of the string s. We traverse the string once with a sliding window.
  * Space Complexity: O(1), since we are using a fixed-size map to count character frequencies (at most 26 uppercase letters).
+ *
+ * Hint: Use a sliding window approach to maintain the longest substring with at most k replacements.
  */
 function characterReplacement(s: string, k: number): number {
   let result = 0;

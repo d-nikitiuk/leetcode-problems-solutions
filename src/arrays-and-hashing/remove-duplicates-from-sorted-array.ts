@@ -44,6 +44,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the length of the input array nums.
  * Space Complexity: O(1), as we are modifying the input array in-place without using any additional data structures.
+ *
+ * Hint: Use a two-pointer technique to track unique elements.
  */
 function removeDuplicates(nums: number[]): number {
   let k = 1;

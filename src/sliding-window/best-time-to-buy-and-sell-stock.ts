@@ -29,6 +29,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the length of the prices array.
  * Space Complexity: O(1), as we are using a constant amount of space for variables.
+ *
+ * Hint: Keep track of the minimum price seen so far and calculate the profit at each step.
  */
 function maxProfit(prices: number[]): number {
   let maxProfit = 0;

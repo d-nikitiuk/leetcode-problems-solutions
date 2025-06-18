@@ -35,6 +35,8 @@ import { Deque } from '../data-scructures';
  *
  * Time Complexity: O(n), where n is the number of elements in nums.
  * Space Complexity: O(k), where k is the size of the sliding window.
+ *
+ * Hint: Use a deque to keep track of the maximum elements in the current window.
  */
 function maxSlidingWindow(nums: number[], k: number): number[] {
   const result = new Array(nums.length - k + 1);

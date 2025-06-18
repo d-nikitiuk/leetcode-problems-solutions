@@ -36,6 +36,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(log n) for get operation, O(1) for set operation, where n is the number of values stored for a key.
  * Space Complexity: O(n) for storing the values, where n is the number of values stored for a key.
+ *
+ * Hint: Use a Map to store key-value pairs with timestamps, and binary search to find the closest timestamp.
  */
 class TimeMap {
   map: Map<string, [number, string][]>;

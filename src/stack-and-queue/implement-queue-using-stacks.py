@@ -37,6 +37,10 @@ myQueue.empty(); // return false
 
 Time Complexity: O(1) for all operations
 Space Complexity: O(n+1) for storing elements in two stacks
+
+Hint: We can use two stacks to simulate the queue behavior. The first stack (stack_in) is used for pushing elements.
+    The second stack (stack_out) is used for popping and peeking elements.
+    When popping or peeking, we transfer elements from stack_in to stack_out if stack_out is empty.
 """
 from src.utils.expect import expect
 

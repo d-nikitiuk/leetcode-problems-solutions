@@ -31,6 +31,8 @@ import { expect } from '../utils';
  * Time Complexity: O(n), where n is the length of the string s.
  * Space Complexity: O(min(n, m)), where n is the length of the string s and m is the size of the character set (e.g., 26 for lowercase English letters).
  * @param s
+ *
+ * Hint: Use a sliding window approach with two pointers to track the longest substring without repeating characters.
  */
 function lengthOfLongestSubstring(s: string): number {
   let length = 0;

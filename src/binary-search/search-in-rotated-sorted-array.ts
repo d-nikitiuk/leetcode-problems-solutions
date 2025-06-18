@@ -37,6 +37,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(log n), where n is the length of the input array nums.
  * Space Complexity: O(1), as we are using a constant amount of space for variables.
+ *
+ * Hint: Use binary search to find the target in the rotated sorted array.
  */
 function search(nums: number[], target: number): number {
   let left = 0;

@@ -25,6 +25,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the length of s2.
  * Space Complexity: O(1), since the character set is fixed (e.g., lowercase English letters).
+ *
+ * Hint: Use a sliding window approach to check if any substring of s2 is a permutation of s1 by maintaining a frequency count of characters.
  */
 function checkInclusion(s1: string, s2: string): boolean {
   // Number of characters in the English alphabet

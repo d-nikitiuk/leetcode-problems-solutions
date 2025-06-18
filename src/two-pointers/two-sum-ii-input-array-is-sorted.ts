@@ -33,6 +33,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the length of the input array numbers.
  * Space Complexity: O(1), since we are using only constant extra space.
+ *
+ * Hint: Use a two-pointer technique to find the indices of the two numbers that add up to the target.
  */
 function twoSum(numbers: number[], target: number): number[] {
   let low = 0;

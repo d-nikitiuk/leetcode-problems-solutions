@@ -24,8 +24,10 @@ import { expect } from '../utils';
  * Input: height = [1,1]
  * Output: 1
  *
- * * Time Complexity: O(n), where n is the length of the input array height.
- * * Space Complexity: O(1), as we are using a constant amount of space for variables.
+ * Time Complexity: O(n), where n is the length of the input array height.
+ * Space Complexity: O(1), as we are using a constant amount of space for variables.
+ *
+ * Hint: Use a two-pointer technique to find the maximum area.
  */
 function maxArea(height: number[]): number {
   let maxArea = 0;

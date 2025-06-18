@@ -32,6 +32,9 @@ Output: []
 
 Time Complexity: O(N log k) where N is the total number of nodes in all linked-lists and k is the number of linked-lists.
 Space Complexity: O(k) for the priority queue used to merge the lists.
+
+Hint: We can use a divide-and-conquer approach to merge the lists in pairs, or we can use a min-heap to always merge
+    the smallest elements first.
 """
 # Definition for singly-linked list.
 from typing import List, Optional

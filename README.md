@@ -192,7 +192,3 @@ npm run lint
 ## 🌟 Support
 
 If you like this project, give it a ⭐ on GitHub!
-
-## TODO
-
-- add solution hints

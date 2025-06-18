@@ -34,6 +34,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(m + n), where m is the length of s and n is the length of t.
  * Space Complexity: O(n), where n is the number of unique characters in t.
+ *
+ * Hint: Use a sliding window approach with two pointers to find the minimum window substring that contains all characters of t.
  */
 function minWindow(s: string, t: string): string {
   if (t === '') return '';

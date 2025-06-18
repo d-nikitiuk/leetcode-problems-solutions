@@ -58,6 +58,9 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n log n), where n is the number of cars. This is due to the sorting step.
  * Space Complexity: O(n), where n is the number of cars. This is for storing the sorted cars and their times.
+ *
+ * Hint: Sort the cars by their starting position and calculate the time it takes for each car to reach the target.
+ *  Count fleets based on the maximum time seen so far.
  */
 function carFleet(target: number, position: number[], speed: number[]): number {
   // Sort the cars by their starting position in ascending order

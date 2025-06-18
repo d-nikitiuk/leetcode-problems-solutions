@@ -20,6 +20,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(4^n / sqrt(n)), where n is the number of pairs of parentheses.
  * Space Complexity: O(4^n / sqrt(n)), for storing the combinations.
+ *
+ * Hint: Use backtracking to generate all combinations of parentheses.
  */
 function generateParenthesis(n: number): string[] {
   const allCombos: string[] = [];

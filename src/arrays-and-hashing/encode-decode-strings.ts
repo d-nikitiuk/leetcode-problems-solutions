@@ -22,6 +22,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the total length of all strings in the input array.
  * Space Complexity: O(n), where n is the total length of all strings in the input array.
+ *
+ * Hint: Use a delimiter to separate the strings and store their lengths to decode them correctly.
  */
 function encode(strs: string[]): string {
   return strs.reduce((acc, str) => acc + `${str.length}#${str}`, '');

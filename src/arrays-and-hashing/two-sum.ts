@@ -31,6 +31,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n)
  * Space Complexity: O(n)
+ *
+ * Hint: Use a Map to store numbers and their indices for quick lookup.
  */
 function twoSum(nums: number[], target: number): number[] {
   const numberMap = new Map();

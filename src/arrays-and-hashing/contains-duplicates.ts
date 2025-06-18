@@ -33,6 +33,8 @@
  *
  * Time Complexity: O(n)
  * Space Complexity: O(n)
+ *
+ * Hint: Use a Set to track seen numbers.
  */
 import { expect } from '../utils';
 

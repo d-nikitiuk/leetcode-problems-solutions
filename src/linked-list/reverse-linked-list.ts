@@ -26,6 +26,8 @@ import { ListNode } from '../data-scructures';
  *
  * Time Complexity: O(n), where n is the number of nodes in the linked list.
  * Space Complexity: O(1), since we are reversing the list in place without using any additional data structures.
+ *
+ * Hint: Use three pointers to reverse the linked list iteratively.
  */
 function reverseList<T>(head: ListNode<T> | null): ListNode<T> | null {
   let previous = null;

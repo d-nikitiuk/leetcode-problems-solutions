@@ -20,6 +20,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the length of the input array heights.
  * Space Complexity: O(n), for the stack used to store indices and heights.
+ *
+ * Hint: Use a stack to keep track of the indices of the histogram bars and calculate areas when encountering a shorter bar.
  */
 function largestRectangleArea(heights: number[]): number {
   let maxArea = 0;

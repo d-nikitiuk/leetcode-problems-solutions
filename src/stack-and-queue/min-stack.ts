@@ -38,6 +38,9 @@ import { expect } from '../utils';
  * minStack.getMin(); // return -2
  *
  * Time Complexity: O(1) for all operations.
+ * Space Complexity: O(n) for storing the stack elements, where n is the number of elements in the stack.
+ *
+ * Hint: Use a stack to keep track of the minimum value at each level of the stack.
  */
 class MinStack {
   private stack: { val: number; min: number }[];

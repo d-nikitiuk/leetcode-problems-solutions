@@ -36,6 +36,9 @@ lRUCache.get(4);    // return 4
 
 Time Complexity: O(1) for both get and put operations.
 Space Complexity: O(capacity) for storing the cache entries.
+
+Hint: We can use an OrderedDict to maintain the order of keys based on their usage,
+    allowing us to efficiently remove the least recently used key when the cache exceeds its capacity.
 """
 from collections import OrderedDict
 

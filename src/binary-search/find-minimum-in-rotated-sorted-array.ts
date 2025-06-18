@@ -32,6 +32,13 @@ import { expect } from '../utils';
  * Input: nums = [11,13,15,17]
  * Output: 11
  * Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
+ *
+ * @param nums - An array of unique integers sorted in ascending order and then rotated.
+ *
+ * Time Complexity: O(log n), where n is the length of the input array nums.
+ * Space Complexity: O(1), as we are using a constant amount of space for variables.
+ *
+ * Hint: Use binary search to find the minimum element in the rotated sorted array.
  */
 function findMin(nums: number[]): number {
   if (nums[0] < nums[nums.length - 1]) {

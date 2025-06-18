@@ -23,6 +23,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the number of elements in nums.
  * Space Complexity: O(n), where n is the number of unique elements in nums.
+ *
+ * Hint: Use a frequency map to count occurrences and then sort or bucket sort based on frequency.
  */
 function topKFrequent(nums: number[], k: number): number[] {
   const frequencyMap: Map<number, number> = new Map();

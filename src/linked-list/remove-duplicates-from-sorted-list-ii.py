@@ -17,6 +17,9 @@ Output: [2,3]
 
 Time Complexity: O(n) where n is the number of nodes in the linked list.
 Space Complexity: O(1) since we are modifying the list in place.
+
+Hint: We can iterate through the linked list and use a dummy node to keep track of the last unique node,
+    skipping over duplicates as we go.
 """
 from typing import Optional
 

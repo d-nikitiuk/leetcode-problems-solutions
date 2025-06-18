@@ -40,6 +40,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(1) for push, pop, and increment operations.
  * Space Complexity: O(maxSize) for storing the stack and increment values.
+ *
+ * Hint: Use an array to store the stack and another array to keep track of increments for each index.
  */
 class CustomStack {
   private stack: number[];

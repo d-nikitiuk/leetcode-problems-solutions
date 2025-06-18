@@ -24,6 +24,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the length of the strings.
  * Space Complexity: O(1), since the character set is fixed (e.g., lowercase English letters).
+ *
+ * Hint: Use a frequency map to count occurrences of each character in both strings and compare them.
  */
 function isAnagram(s: string, t: string): boolean {
   if (s.length !== t.length) return false;

@@ -24,6 +24,9 @@ Explanation: The first 2 pairs are returned from the sequence: [1,1],[1,1],[1,2]
 
 Time Complexity: O(k log k) where k is the number of pairs to return. The heap operations take O(log k) time.
 Space Complexity: O(k) for the result list and the heap.
+
+Hint: We can use a min-heap to efficiently find the k pairs with the smallest sums by always expanding the smallest
+    sum pair and pushing new pairs into the heap.
 """
 import heapq
 from typing import List

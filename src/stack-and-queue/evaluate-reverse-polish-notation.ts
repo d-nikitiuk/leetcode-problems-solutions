@@ -43,6 +43,9 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the number of tokens.
  * Space Complexity: O(n), where n is the number of tokens.
+ *
+ * Hint: Use a stack to evaluate the expression. Push operands onto the stack, and when an operator is encountered,
+ *  pop the required number of operands from the stack, apply the operator, and push the result back onto the stack.
  */
 function evalRPN(tokens: string[]): number {
   const stack: number[] = [];

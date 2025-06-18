@@ -43,6 +43,9 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(1), since the board size is fixed at 9x9, the operations are constant time.
  * Space Complexity: O(1), since we are using a fixed-size set to track seen numbers.
+ *
+ * Hint: Use a set to track seen numbers in rows, columns, and boxes.
+ *  Boxes can be identified by their starting indices.
  */
 function isValidSudoku(board: string[][]): boolean {
   const set = new Set();

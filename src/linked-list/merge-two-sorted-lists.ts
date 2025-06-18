@@ -33,6 +33,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n + m), where n and m are the lengths of the two linked lists.
  * Space Complexity: O(1), since we are merging the lists in place without using any additional data structures.
+ *
+ * Hint: Use a dummy node to simplify the merging process.
  */
 function mergeTwoLists(list1: ListNode<number> | null, list2: ListNode<number> | null): ListNode<number> | null {
   const head: ListNode<number> = { val: 0, next: null };

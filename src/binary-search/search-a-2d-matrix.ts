@@ -26,6 +26,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(log(m * n)), where m is the number of rows and n is the number of columns in the matrix.
  * Space Complexity: O(1), as we are using a constant amount of space for variables.
+ *
+ * Hint: Treat the 2D matrix as a 1D array and use binary search to find the target.
  */
 function searchMatrix(matrix: number[][], target: number): boolean {
   const [rows, cols] = [matrix.length, matrix[0].length];

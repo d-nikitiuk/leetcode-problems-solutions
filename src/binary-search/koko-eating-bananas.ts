@@ -31,6 +31,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n log m), where n is the number of piles and m is the maximum number of bananas in a pile.
  * Space Complexity: O(1), as we are using a constant amount of space for variables.
+ *
+ * Hint: Use binary search to find the minimum eating speed k that allows Koko to finish all piles in h hours.
  */
 function minEatingSpeed(piles: number[], h: number): number {
   let low = 0;

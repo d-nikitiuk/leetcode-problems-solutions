@@ -28,6 +28,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n)
  * Space Complexity: O(n)
+ *
+ * Hint: Use a Set to track unique numbers and check for consecutive sequences.
  */
 function longestConsecutive(nums: number[]): number {
   const numsSet = new Set(nums);

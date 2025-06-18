@@ -36,6 +36,8 @@ import { expect } from '../utils';
  * Space Complexity: O(n * k), where n is the number of strings and k is the maximum length of a string in strs.
  *
  * @param strs
+ *
+ * Hint: Use a map to group anagrams by their sorted string representation.
  */
 function groupAnagrams(strs: string[]): string[][] {
   const map: Map<string, string[]> = new Map();

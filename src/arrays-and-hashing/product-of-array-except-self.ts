@@ -25,6 +25,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the length of the input array nums.
  * Space Complexity: O(n), where n is the length of the input array nums.
+ *
+ * Hint: Use two passes to calculate prefix and postfix products.
  */
 function productExceptSelf(nums: number[]): number[] {
   const result = new Array(nums.length).fill(1);

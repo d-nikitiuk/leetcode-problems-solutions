@@ -18,6 +18,12 @@ Example 2:
 
 Input: sentence = "leetcode"
 Output: false
+
+Time Complexity: O(n) where n is the length of the sentence.
+Space Complexity: O(1) since we are using a fixed set of characters (the English alphabet).
+
+Hint: To check if a sentence is a pangram, we can use a set to track the unique characters in the sentence and compare
+    its size to the size of the English alphabet.
 """
 import string
 

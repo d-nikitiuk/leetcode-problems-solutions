@@ -21,6 +21,9 @@ Explanation: 1 has no prime factors, therefore all of its prime factors are limi
 
 Time Complexity: O(n log n) for the heap approach and O(n) for the dynamic programming approach.
 Space Complexity: O(n) for the heap approach and O(1) for the dynamic programming approach.
+
+Hint: We can use a min-heap to efficiently find the nth ugly number by always expanding the smallest ugly number
+    and pushing new ugly numbers into the heap.
 """
 import heapq
 

@@ -27,6 +27,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(log(min(m, n))), where m and n are the lengths of the two input arrays.
  * Space Complexity: O(1), as we are using a constant amount of space for variables.
+ *
+ * Hint: Use binary search to find the correct partition between the two arrays.
  */
 function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
   if (nums1.length > nums2.length) {

@@ -36,6 +36,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the number of nodes in the linked list.
  * Space Complexity: O(1), since we are using two pointers (slow and fast) to detect the cycle without using any additional data structures.
+ *
+ * Hint: Use Floyd's Tortoise and Hare algorithm to detect cycles in a linked list.
  */
 function hasCycle(head: ListNode<number> | null): boolean {
   let fast = head;

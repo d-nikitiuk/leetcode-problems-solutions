@@ -33,8 +33,10 @@ import { expect } from '../utils';
  * Output: [[0,0,0]]
  * Explanation: The only possible triplet sums up to 0.
  *
- * * Time Complexity: O(n^2), where n is the length of the input array nums.
- * * Space Complexity: O(1) for the result map, as we are not using any additional data structures that grow with input size.
+ * Time Complexity: O(n^2), where n is the length of the input array nums.
+ * Space Complexity: O(1) for the result map, as we are not using any additional data structures that grow with input size.
+ *
+ * Hint: Use a two-pointer technique after sorting the array to find triplets that sum to zero.
  */
 function threeSum(nums: number[]): number[][] {
   const sortedNums: number[] = nums.sort((a, b) => a - b);

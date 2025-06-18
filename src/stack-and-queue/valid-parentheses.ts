@@ -41,6 +41,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the length of the string s.
  * Space Complexity: O(n), in the worst case, where all characters are opening brackets and stored in the stack.
+ *
+ * Hint: Use a stack to keep track of opening brackets and check for matching closing brackets.
  */
 function isValid(s: string): boolean {
   const stack: string[] = [];

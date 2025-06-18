@@ -47,6 +47,8 @@ Explanation: The two lists do not intersect, so return null.
 
 Time Complexity: O(n+m) where n is the length of list A and m is the length of list B.
 Space Complexity: O(1) since we are not using any extra space for storing nodes.
+
+Hint: We can use a two-pointer approach to find the intersection node efficiently without using extra space.
 """
 from typing import Optional
 

@@ -28,6 +28,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the length of the input array temperatures.
  * Space Complexity: O(n), where n is the length of the input array temperatures.
+ *
+ * Hint: Use a stack to keep track of indices of temperatures and their values to find the next warmer day efficiently.
  */
 function dailyTemperatures(temperatures: number[]): number[] {
   const result: number[] = new Array(temperatures.length).fill(0);

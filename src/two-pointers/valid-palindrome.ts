@@ -30,6 +30,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the length of the string s. We traverse the string once to filter and normalize it.
  * Space Complexity: O(n), where n is the length of the filtered string. We store the filtered string in memory.
+ *
+ * Hint: Use two pointers to compare characters from the start and end of the string, moving towards the center.
  */
 function isPalindrome(s: string): boolean {
   const sAlphaNum = s.replace(/[^0-9a-z]/gi, '').toLowerCase();
