@@ -50,6 +50,8 @@ import { expect } from '../utils';
  *
  * Time Complexity: O(n), where n is the number of elements in nums.
  * Space Complexity: O(n), where n is the number of unique elements in nums.
+ *
+ * Hint: Use a frequency map to count occurrences and then sort or bucket sort based on frequency.
  */
 function topKFrequent(nums: number[], k: number): number[] {
   const frequencyMap: Map<number, number> = new Map();
@@ -116,6 +118,9 @@ Example 2:
 
 Input: sentence = "leetcode"
 Output: false
+
+Hint: To check if a sentence is a pangram, we can use a set to track the unique characters in the sentence and compare
+    its size to the size of the English alphabet.
 """
 import string
 
@@ -145,8 +150,8 @@ if __name__ == "__main__":
 |------------|-------|
 | Easy       | 15    |
 | Medium     | 29    |
-| Hard       | 6     |
-| **Total**  | 50    |
+| Hard       | 7     |
+| **Total**  | 51    |
 
 
 ## 🚀 Getting Started
