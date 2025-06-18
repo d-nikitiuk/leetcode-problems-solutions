@@ -144,9 +144,9 @@ if __name__ == "__main__":
 | Difficulty | Count |
 |------------|-------|
 | Easy       | 15    |
-| Medium     | 28    |
+| Medium     | 29    |
 | Hard       | 6     |
-| **Total**  | 49    |
+| **Total**  | 50    |
 
 
 ## 🚀 Getting Started
@@ -192,3 +192,7 @@ npm run lint
 ## 🌟 Support
 
 If you like this project, give it a ⭐ on GitHub!
+
+## TODO
+
+- add solution hints
