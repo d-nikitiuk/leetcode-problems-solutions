@@ -1,4 +1,8 @@
 /**
+ * LeetCode Problem: Diameter of Binary Tree
+ * Problem Link: https://leetcode.com/problems/diameter-of-binary-tree/
+ * Level: Easy
+ * Problem Statement:
  * Given the root of a binary tree, return the length of the diameter of the tree.
  *
  * The diameter of a binary tree is the length of the longest path between any two nodes in a tree.
